@@ -35,15 +35,15 @@ If you are working in Google Colab:
 
 ## Project Overview
 
-| Field               | Details                        |
-| ------------------- | ------------------------------ |
-| **Project Title**   | _PitLane_                      |
-| **Sector**          | _Formula 1_                    |
-| **Team ID**         | _Group-3_                      |
-| **Section**         | _Section-E_                    |
-| **Faculty Mentor**  | _Satyaki Das, Ayushi Vashisht_ |
-| **Institute**       | Newton School of Technology    |
-| **Submission Date** | _April,28,2026_                |
+| Field | Details |
+|---|---|
+| **Project Title** | **PitLane: F1 Strategy & Performance Analytics** |
+| **Sector** | Sports & Data Analytics |
+| **Team ID** | DVA-E-Group-3 |
+| **Section** | Section E |
+| **Faculty Mentor** | _To be filled by team_ |
+| **Institute** | Newton School of Technology |
+| **Submission Date** | April 2026 |
 
 ### Team Members
 
@@ -61,40 +61,37 @@ If you are working in Google Colab:
 
 ## Business Problem
 
-This project is a multi-layered investigation into the efficiency of a billion-dollar sport. The analysis goes beyond simple race outcomes to address efficiency through three analytical pillars:
-- **Pillar A: The "Driver Alpha" (Quantitative Finance Approach)** - Isolating driver contribution to identify who "over-performed" their machinery (the "Beta"), mirroring Performance Attribution in portfolio management.
-- **Pillar B: The Strategic "Game" (Game Theory & Logistics)** - Analyzing "Undercut" and "Overcut" pit-stop timings to determine efficiency, directly applying to Supply Chain Optimization and Dynamic Decision Making under pressure.
-- **Pillar C: Reliability & Risk Mitigation (Predictive Modeling)** - Building risk profiles for different engine eras (e.g., V10 vs. post-2014 hybrid), translating to Predictive Maintenance in manufacturing and aerospace.
+In the high-stakes world of Formula 1, races are often won or lost in the pit lane rather than on the track. Team Principals and Strategy Engineers need to optimize every second to maintain a competitive edge, yet the correlation between pit stop efficiency and final race outcomes is often obscured by seasonal noise. This project analyzes 70+ years of F1 data to identify the "Golden Window" for pit strategy and track position retention.
 
 **Core Business Question**
 
-> How can we quantitatively decouple driver skill from car performance, and to what extent do mid-race strategic decisions (pit-stop timing and reliability management) determine championship outcomes across different racing eras?
+> "How does pit stop duration and strategic lap-timing impact a team's probability of gaining/retaining track position, and which constructors have historically optimized this 'PitLane' advantage?"
 
 **Decision Supported**
 
-> This analysis will enable stakeholders to properly attribute performance (operator vs. machine), optimize logistical strategies and timing in sequential games of imperfect information, and implement predictive maintenance based on historical equipment reliability.
+> This analysis will enable Team Strategists to benchmark their pit crew performance against rivals and determine the statistical risk-reward of a 1-stop vs. 2-stop strategy across different circuit types.
 
 ---
 
 ## Dataset
 
-| Attribute               | Details                                           |
-| ----------------------- | ------------------------------------------------- |
-| **Source Name**         | _e.g. World Bank, data.gov.in, Kaggle (raw only)_ |
-| **Direct Access Link**  | _Paste the direct download or access URL_         |
-| **Row Count**           | _Must be greater than 5,000_                      |
-| **Column Count**        | _Must be greater than 8 meaningful columns_       |
-| **Time Period Covered** | _e.g. Jan 2019 to Dec 2023_                       |
-| **Format**              | _e.g. CSV, JSON, Excel_                           |
+| Attribute | Details |
+|---|---|
+| **Source Name** | Ergast Motor Racing Dataset (via Kaggle) |
+| **Direct Access Link** | [Formula 1 World Championship (1950-2023)](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020) |
+| **Row Count** | 23,000+ (results.csv) |
+| **Column Count** | 18+ meaningful columns across 13 files |
+| **Time Period Covered** | 1950 to 2023 |
+| **Format** | CSV (Relational) |
 
 **Key Columns Used**
 
-| Column Name | Description     | Role in Analysis                       |
-| ----------- | --------------- | -------------------------------------- |
-| _column_1_  | _What it means_ | _Used for KPI / filter / segmentation_ |
-| _column_2_  | _What it means_ | _Used for KPI / filter / segmentation_ |
-| _column_3_  | _What it means_ | _Used for KPI / filter / segmentation_ |
-| _column_4_  | _What it means_ | _Used for KPI / filter / segmentation_ |
+| Column Name | Description | Role in Analysis |
+|---|---|---|
+| `milliseconds` | Final race time in ms | Performance KPI |
+| `pit_stop_duration`| Time spent in pit stall | Strategy KPI |
+| `positionOrder` | Final finishing position | Outcome Variable |
+| `statusId` | Reason for DNF (Engine, Collision) | Reliability Metric |
 
 For full column definitions, see [`docs/data_dictionary.md`](docs/data_dictionary.md).
 
